@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "ClientConsole": {
+      "commandName": "WSL2",
+      "environmentVariables": {},
+      "distributionName": ""
+    }
+  }
+}

@@ -1,0 +1,13 @@
+﻿{
+  "profiles": {
+    "SocketDemo": {
+      "commandName": "WSL2",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "applicationUrl": "http://localhost:5047",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
