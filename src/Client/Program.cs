@@ -4,7 +4,7 @@ using Polly;
 const string Hostname = "localhost";
 const string UnixSocketPath = "/tmp/foo.sock";
 
-// We ware using Polly here to ensure our backend is available.
+// We are using Polly here to ensure our backend is available.
 var policy = Policy.Handle<Exception>().RetryForever();
 policy.Execute(() =>
 {
@@ -14,7 +14,7 @@ policy.Execute(() =>
     }
 });
 
-// Request data from Unix socket before .NET 5 / .NET 6
+// Request data from Unix socket before, the hard way...
 using (var socket = new Socket(AddressFamily.Unix, SocketType.Stream, ProtocolType.IP))
 {
     var endpoint = new UnixDomainSocketEndPoint(UnixSocketPath);
