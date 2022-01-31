@@ -15,19 +15,18 @@ policy.Execute(() =>
 });
 
 // Request data from Unix socket before, the hard way...
-using (var socket = new Socket(AddressFamily.Unix, SocketType.Stream, ProtocolType.IP))
-{
-    var endpoint = new UnixDomainSocketEndPoint(UnixSocketPath);
-    socket.Connect(endpoint);
+using var socket = new Socket(AddressFamily.Unix, SocketType.Stream, ProtocolType.IP);
 
-    var requestBytes = System.Text.Encoding.UTF8.GetBytes($"GET / HTTP/1.0\r\nHost: {Hostname}\r\nAccept: */*\r\n\r\n");
-    socket.Send(requestBytes);
+var endpoint = new UnixDomainSocketEndPoint(UnixSocketPath);
+socket.Connect(endpoint);
 
-    byte[] receivedBytes = new byte[1024];
-    socket.Receive(receivedBytes, 1024, SocketFlags.None);
+var requestBytes = System.Text.Encoding.UTF8.GetBytes($"GET / HTTP/1.0\r\nHost: {Hostname}\r\nAccept: */*\r\n\r\n");
+socket.Send(requestBytes);
 
-    Console.WriteLine(System.Text.Encoding.UTF8.GetString(receivedBytes));
-}
+byte[] receivedBytes = new byte[1024];
+socket.Receive(receivedBytes, 1024, SocketFlags.None);
+
+Console.WriteLine(System.Text.Encoding.UTF8.GetString(receivedBytes));
 
 // Using SocketsHttpHandler to request data from Unix socket.  
 // https://docs.microsoft.com/de-de/dotnet/api/system.net.http.socketshttphandler?view=net-6.0

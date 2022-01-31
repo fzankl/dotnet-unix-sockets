@@ -1,7 +1,7 @@
 using System.Net.Sockets;
 using Refit;
 
-const string Hostname = "localhost";
+const string BaseAddress = "http://localhost";
 const string UnixSocketPath = "/tmp/foo.sock";
 
 var builder = WebApplication.CreateBuilder(args);
@@ -32,7 +32,7 @@ builder.Services
     })
     .ConfigureHttpClient((_, client) =>
     {
-        client.BaseAddress = new Uri($"http://{Hostname}");
+        client.BaseAddress = new Uri(BaseAddress);
     });
 
 var app = builder.Build();
