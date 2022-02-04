@@ -19,15 +19,6 @@ builder.Services
 
                 return new NetworkStream(socket, ownsSocket: false);
             }
-            //SslOptions = new SslClientAuthenticationOptions
-            //{
-            //    EnabledSslProtocols = SslProtocols.Tls12 | SslProtocols.Tls13,
-            //    RemoteCertificateValidationCallback = new RemoteCertificateValidationCallback((message, cert, chain, sslPolicyErrors) =>
-            //    {
-            //        // Custom server certificate validation logic...
-            //        return true;
-            //    })
-            //}
         };
     })
     .ConfigureHttpClient((_, client) =>

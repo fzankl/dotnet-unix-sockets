@@ -1,7 +1,7 @@
 ﻿{
   "profiles": {
     "ClientWeb": {
-      "commandName": "WSL2",
+      "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": false,
       "applicationUrl": "http://localhost:5094",

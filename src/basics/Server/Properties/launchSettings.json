@@ -1,7 +1,7 @@
 ﻿{
   "profiles": {
     "SocketDemo": {
-      "commandName": "WSL2",
+      "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": false,
       "environmentVariables": {

@@ -1,0 +1,14 @@
+syntax = "proto3";
+option csharp_namespace = "UnixSocketDemo";
+
+service Foo {
+  rpc GetFoo (FooRequest) returns (FooResponse);
+}
+
+message FooRequest {
+  string message = 1;
+}
+
+message FooResponse {
+  string message = 1;
+}
