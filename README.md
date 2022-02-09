@@ -8,7 +8,8 @@ This example shows how to work with Unix Domain Sockets in .NET 6. The implement
 
 Detailed information:
 
-  * TBD
+  * English: https://www.fzankl.de/en/blog/unix-domain-sockets-in-dotnet-basics-and-real-world-examples
+  * German: https://www.fzankl.de/de/blog/unix-domain-sockets-in-dotnet-grundlagen-und-praktische-beispiele
 
 ## How to run this sample
 
