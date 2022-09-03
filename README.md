@@ -6,10 +6,7 @@ Example how to use and interact with Unix Domain Sockets using .NET 6
 
 This example shows how to work with Unix Domain Sockets in .NET 6. The implementation shows the basic setup to serve and consume applications. In addition, inter-process communication between services written in .NET and Python is demonstrated.
 
-Detailed information:
-
-  * English: https://www.fzankl.de/en/blog/unix-domain-sockets-in-dotnet-basics-and-real-world-examples
-  * German: https://www.fzankl.de/de/blog/unix-domain-sockets-in-dotnet-grundlagen-und-praktische-beispiele
+Detailed information: https://www.fzankl.de/en/blog/unix-domain-sockets-in-dotnet-basics-and-real-world-examples
 
 ## How to run this sample
 
